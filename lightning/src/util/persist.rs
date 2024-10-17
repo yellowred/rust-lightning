@@ -861,7 +861,7 @@ where
 
 /// A struct representing a name for a monitor.
 #[derive(Debug)]
-struct MonitorName(String);
+pub struct MonitorName(String);
 
 impl MonitorName {
 	/// Constructs a [`MonitorName`], after verifying that an [`OutPoint`] can
@@ -917,7 +917,7 @@ impl From<OutPoint> for MonitorName {
 
 /// A struct representing a name for an update.
 #[derive(Debug)]
-struct UpdateName(u64, String);
+pub struct UpdateName(pub u64, String);
 
 impl UpdateName {
 	/// Constructs an [`UpdateName`], after verifying that an update sequence ID
